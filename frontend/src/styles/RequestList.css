@@ -1,0 +1,154 @@
+.request-list-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.request-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.request-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 250px; /* 높이를 늘림 */
+  display: flex;
+  flex-direction: column;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.request-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.request-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.private-content {
+  font-style: italic;
+  color: #999;
+}
+
+.request-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+}
+
+.request-status {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.request-card.확인 전 {
+  border-left: 4px solid #ccc;
+}
+
+.request-card.확인 중 {
+  border-left: 4px solid #ffd700;
+}
+
+.request-card.답변 완료 {
+  border-left: 4px solid #4a90e2;
+}
+
+.request-status.확인 전 {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.request-status.확인 중 {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.request-status.답변 완료 {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #4a90e2;
+  background-color: #fff;
+  color: #4a90e2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.pagination button.active {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.pagination button:hover, .pagination button.active {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.pagination span {
+  margin: 0 5px;
+}
+
+.request-card {
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.request-card.확인전 {
+  border-left-color: #ccc;
+}
+
+.request-card.확인중 {
+  border-left-color: #ffd700;
+}
+
+.request-card.답변완료 {
+  border-left-color: #4a90e2;
+}
+
+.request-status.확인전 {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.request-status.확인중 {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.request-status.답변완료 {
+  background-color: #4a90e2;
+  color: #fff;
+}

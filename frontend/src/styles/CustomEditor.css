@@ -1,0 +1,96 @@
+.custom-editor {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar select,
+.toolbar input,
+.toolbar button {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+.toolbar select {
+  height: 30px;
+}
+
+.toolbar input[type="color"] {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.editor-content {
+  min-height: 300px;
+  padding: 15px;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.editor-content:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.editor-content img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.editor-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.editor-content ul, .editor-content ol {
+  margin-left: 20px;
+}
+
+.image-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  right: -5px;
+  bottom: -5px;
+  cursor: se-resize;
+}
+
+.resizable {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}

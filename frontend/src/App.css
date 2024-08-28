@@ -1,0 +1,19 @@
+.App {
+  background-color: #fffbf7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬을 위해 추가 */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1400px; /* 전체 컨텐츠의 최대 너비 설정 */
+  padding: 60px 20px 0; /* 상단 패딩은 헤더 높이만큼, 좌우 패딩 추가 */
+  box-sizing: border-box; /* 패딩을 너비에 포함 */
+}
+
+main {
+  width: 100%;
+  color: #086ac5;
+}

@@ -1,0 +1,414 @@
+/* 전반적인 검색 결과 영역 스타일 */
+.search-results {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  /* 구분선 */
+  border: 1px dashed #ccc; /* 전체 영역에 구분선 추가 */
+  position: relative;
+}
+
+/* 검색 결과 헤더 스타일 */
+.search-results-header h1 {
+  color: #086ac5;
+  font-size: 24px;
+  margin-bottom: 20px;
+  /* 구분선 */
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* 검색 트랙 섹션 및 앨범 섹션 간 간격 설정 */
+.search-tracks-section, .search-albums-section {
+  margin-bottom: 40px;
+  /* 구분선 */
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 20px;
+}
+
+/* 트랙 항목 스타일 */
+.search-track-item {
+  display: grid;
+  grid-template-columns: 12% 78% 10%; /* 각 열의 너비 비율 */
+  grid-template-rows: auto auto auto; /* 행 높이 자동 조정 */
+  gap: 10px; /* 그리드 항목 간의 간격 */
+  background-color: #fff8f1;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  /* 구분선 */
+  border: 1px solid #ddd;
+}
+
+/* 트랙 항목의 앨범 커버 스타일 */
+.search-track-album-cover {
+  grid-column: 1 / 2; /* 첫 번째 열 */
+  grid-row: 1 / 4; /* 첫 번째와 두 번째 행 */
+  cursor: pointer;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 비율 유지 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  /* 구분선 */
+  border: 1px solid #ccc;
+}
+
+
+/* 앨범 커버 이미지 스타일 */
+.search-track-album-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 앨범 제목 스타일 */
+.search-track-album-title {
+  grid-column: 1;
+  grid-row: 3;
+  font-weight: bold;
+  font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+
+/* 트랙 제목 스타일 */
+.search-track-title {
+  grid-column: 2; /* 두 번째 열 */
+  grid-row: 1; /* 첫 번째 행 */
+  font-weight: bold;
+  font-size: 1.2em;
+  align-self: center; /* 수직 정렬 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-track-composer {
+  grid-column: 3; /* 세 번째 열 */
+  grid-row: 1; /* 첫 번째 행 */
+  font-size: 1em;
+  font-weight: bold;
+  color: #0065a8;
+  text-align: right;
+  align-self: center; /* 수직 정렬 */
+  margin-right: 20px; /* 오른쪽 여백 */
+}
+
+/* 플레이어 스타일 */
+.search-track-player {
+  grid-column: 2 / 4; /* 두 번째와 세 번째 열 */
+  grid-row: 2; /* 두 번째 행 */
+  margin-top: 10px;
+  align-self: center; /* 수직 정렬 */
+  
+  /* 구분선 */
+
+}
+
+.search-track-tags button {
+  border: none; /* 테두리 없애기 */
+  background-color: transparent; /* 배경색 투명하게 하기 */
+  padding: 3px 5px; /* 버튼 안쪽 여백 조정 */
+  margin: 2px; /* 버튼 간의 간격 조정 */
+  cursor: pointer; /* 커서 모양을 포인터로 변경 */
+  font-size: 12px; /* 글자 크기 조정 */
+  color: #387fb9; /* 버튼 글자 색상 조정 (필요에 따라 변경) */
+  background-color: #e2f0ff;
+  border-radius: 15px; /* 버튼 모서리 둥글게 만들기 (선택 사항) */
+  outline: none; /* 포커스 시 테두리 제거 */
+}
+
+/* 호버 상태에서 버튼 스타일 */
+.search-track-tags button:hover {
+  background-color: #005ec2; /* 호버 시 배경색 조정 */
+  color: #ffc400;
+}
+
+/* 포커스 상태에서 버튼 스타일 (선택 사항) */
+.search-track-tags button:focus {
+  box-shadow: none; /* 포커스 시 박스 쉐도우 제거 */
+}
+
+/* 기분 및 장르 태그 스타일 */
+.search-mood-tag, .search-genre-tag {
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #e0f0ff;
+  color: #0073d1;
+}
+
+/* 서브 트랙 토글 버튼 스타일 */
+.search-toggle-sub-tracks {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: #0051a8;
+  color: #ffd000;
+  border: none;
+  padding: 4px 8px; /* 버튼 패딩 조정 */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+  align-self: center;
+  white-space: nowrap;
+  width: 80px; /* 버튼 넓이를 콘텐츠에 맞게 자동 조정 */
+  margin-left: 15px;
+  /* 구분선 */
+  border: 1px solid #ddd;
+}
+
+/* 서브 트랙 영역 스타일 */
+.search-sub-tracks {
+  grid-column: 1 / 4;
+  grid-row: 4;
+  margin: 10px 0 0px; /* 마진 조정 */
+  /* 구분선 */
+  border: 1px dashed #ddd;
+  padding: 10px 20px;
+}
+
+/* 서브 트랙 항목 스타일 */
+.search-sub-track-item {
+  display: grid;
+  grid-template-columns: 30% 70%; /* 비율 기반 레이아웃 */
+  align-items: center;
+  padding: 5px;
+  border-radius: 4px;
+
+  margin-bottom: 0px;
+  /* 구분선 */
+}
+
+/* 서브 트랙 버전 스타일 */
+.search-sub-track-version {
+  font-size: 0.9em;
+  color: #086ac5;
+  font-weight: bold;
+}
+
+/* 커스텀 오디오 플레이어 스타일 */
+.search-custom-audio-player {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%; /* 너비를 100%로 조정 */
+  /* 구분선 */
+
+}
+
+/* 재생/일시 정지 버튼 스타일 */
+.search-play-pause-button {
+  background-color: #086ac5;
+  color: #ffc400;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* 구분선 */
+  border: 1px solid #ccc;
+}
+
+/* 진행 바 컨테이너 스타일 */
+.search-progress-container {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #dddddd;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 2px;
+  position: relative;
+  /* 구분선 */
+  border: 1px dashed #ccc;
+}
+
+/* 진행 바 스타일 */
+.search-progress-bar {
+  height: 100%;
+  background-color: #086ac5;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 시간 표시 스타일 */
+.search-time-display {
+  font-size: 12px;
+  color: #666;
+  min-width: 80px;
+  text-align: left;
+}
+
+/* 앨범 그리드 스타일 */
+.search-albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 반응형 그리드 */
+  gap: 20px; /* 그리드 항목 간의 간격 */
+  /* 구분선 */
+  border: 1px dashed #ddd;
+}
+
+/* 앨범 카드 스타일 */
+.search-album-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  /* 구분선 */
+  border: 1px solid #ccc;
+}
+
+/* 앨범 카드 호버 스타일 */
+.search-album-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 앨범 아트워크 스타일 */
+.search-album-artwork {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  /* 구분선 */
+  border: 1px solid #ccc;
+}
+
+/* 앨범 아트워크 이미지 스타일 */
+.search-album-artwork img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 앨범 정보 스타일 */
+.search-album-info {
+  padding: 15px;
+}
+
+/* 앨범 제목 스타일 */
+.search-album-info h3 {
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  color: #005ec2;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #086ac585;
+}
+
+/* 앨범 소개 스타일 */
+.search-album-introduction {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 앨범 태그 스타일 */
+.search-album-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* 앨범 태그 스타일 */
+.search-album-tag, .search-album-genre-tag {
+  font-size: 1px;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+/* 일반 앨범 태그 스타일 */
+.search-album-tag {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* 장르 앨범 태그 스타일 */
+.search-album-genre-tag {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* 페이지네이션 스타일 */
+.search-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* 태그 버튼에서 외부선 제거 */
+.search-track-tags button, .search-album-tag, .search-album-genre-tag {
+  border: none; /* 테두리 없애기 */
+  background-color: transparent; /* 배경색 투명하게 하기 */
+  padding: 3px 5px; /* 버튼 안쪽 여백 조정 */
+  margin: 2px; /* 버튼 간의 간격 조정 */
+  cursor: pointer; /* 커서 모양을 포인터로 변경 */
+  font-size: 12px; /* 글자 크기 조정 */
+  color: #387fb9; /* 버튼 글자 색상 조정 (필요에 따라 변경) */
+  background-color: #e2f0ff;
+  border-radius: 15px; /* 버튼 모서리 둥글게 만들기 */
+  outline: none; /* 포커스 시 테두리 제거 */
+}
+
+/* 앨범 태그의 기본 스타일 */
+.search-album-tag, .search-album-genre-tag {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  border: none; /* 외부선 제거 */
+}
+
+/* 호버 시 태그 및 링크에 커서 변경 */
+.search-album-artwork:hover, 
+.search-album-info h3:hover, 
+.search-album-tag:hover, 
+.search-album-genre-tag:hover, 
+.search-toggle-sub-tracks:hover, 
+.search-track-tags button:hover,
+.search-track-album-cover:hover {
+  cursor: pointer; /* 커서 포인터로 변경 */
+}
+
+/* 페이지네이션 버튼 스타일 및 커서 변경 */
+.search-pagination button:hover {
+  cursor: pointer;
+  
+}
+.search-composer-button {
+  background: none;
+  border: none;
+  color: #0065a8;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 2px 5px;
+  margin: 0 2px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.search-composer-button:hover {
+  background-color: #e0f0ff;
+}

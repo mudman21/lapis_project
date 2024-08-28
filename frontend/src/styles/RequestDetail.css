@@ -1,0 +1,263 @@
+.request-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+  background-color: #e8f4ff;
+  color: #2196F3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-form textarea {
+  height: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-btn, .save-btn {
+  background-color: #7ab1dd;
+  color: white;
+}
+.edit-btn:hover, .save-btn:hover {
+  background-color: #32648d;
+  color: white;
+}
+.delete-btn, .cancel-btn {
+  background-color: #e07f79;
+  color: white;
+}
+.delete-btn:hover, .cancel-btn:hover {
+  background-color: #c04f49;
+  color: white;
+}
+.edit-btn, .save-btn, .delete-btn, .cancel-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.comment-content {
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+.comment-date {
+  font-size: 0.8em;
+  color: #888;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.delete-comment-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.delete-comment-btn:hover {
+  color: #df8983;
+}
+
+.comment-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.comment-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;  /* 변경: center에서 stretch로 */
+  gap: 10px;
+}
+
+.comment-form-actions input[type="password"] {
+  width: 150px;
+  padding: 8px 12px;  /* 패딩 조정 */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;  /* 글자 크기 추가 */
+  line-height: 1.5;  /* 줄 높이 추가 */
+}
+
+.comment-form-actions button {
+  background-color: #76b678;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;  /* 글자 크기 추가 */
+  line-height: 1.5;  /* 줄 높이 추가 */
+  height: 100%;  /* 높이를 100%로 설정 */
+  display: flex;  /* Flexbox 사용 */
+  align-items: center;  /* 세로 중앙 정렬 */
+  justify-content: center;  /* 가로 중앙 정렬 */
+}
+
+.comment-form-actions button:hover {
+  background-color: #45a049;
+}
+
+/* 추가된 스타일 */
+.request-view {
+  margin-bottom: 20px;
+}
+
+.request-view h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+/* ... (기존 스타일 유지) ... */
+
+.request-view p {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word; 
+  max-width: 100%; 
+  line-height: 1.6;  /* 줄 간격을 넓혀 가독성 향상 */
+  background-color: #f9f9f9; /* 배경색 추가 */
+  padding: 15px; /* 안쪽 여백 추가 */
+  border-radius: 8px; /* 모서리 둥글게 처리 */
+}
+
+.request-view .email {
+  word-break: break-all;
+  color: #888; /* 색상을 좀 더 눈에 띄지 않게 변경 */
+  font-size: 12px; /* 글자 크기를 줄임 */
+  letter-spacing: normal; /* 자간 조정 */
+  font-weight: normal; /* 굵기 조정 */
+  display: block;
+  margin-top: 5px; /* 제목과의 간격을 줄임 */
+  margin-bottom: 10px; /* 본문과의 간격을 늘림 */
+  padding: 0; /* 안쪽 여백 제거 */
+  background-color: transparent; /* 배경색 제거 */
+  border: none; /* 테두리 제거 */
+}
+
+.request-view .visibility { /* 공개/비공개 표시 제거 */
+  display: none; 
+}
+
+.status-dropdown {
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.comment-form button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #357ae8;
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.delete-comment-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-comment-btn:hover {
+  background-color: #ff3333;
+}

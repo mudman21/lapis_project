@@ -1,0 +1,52 @@
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.admin-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.admin-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px 20px;
+}
+
+.reload-data-button,
+.logout-button {
+    padding: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    width: 95px;
+}
+
+.reload-data-button {
+    background-color: #756a00;
+    color: rgb(255, 247, 177);
+}
+
+.reload-data-button:hover {
+    background-color: #45a049;
+}
+
+.reload-data-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}

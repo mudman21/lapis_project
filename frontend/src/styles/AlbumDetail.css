@@ -1,0 +1,344 @@
+.album-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #ffffff;
+  color: #005db4;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  padding: 20px; /* 여유 공간 추가 */
+}
+
+.album-info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.album-introduction {
+  background-color: #fffaf1d5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 100px; /* 높이 변동을 방지하기 위한 최소 높이 설정 */
+}
+.album-introduction h2 {
+  margin-top: -10px;
+  color: #0063b4;
+  margin-bottom: 10px;
+}
+
+.album-introduction p {
+  color: #0065c4;
+  line-height: 1.7;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.album-text {
+  flex: 1;
+}
+
+.album-text h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.album-description {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.album-release-date {
+  margin-top: -10px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.track-list h2 {
+  border-bottom: 2px solid #005db4;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.track-item {
+  background-color: #fff8f1;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.track-item:hover {
+  background-color: #fff7edd5;
+}
+
+.main-track {
+  background-color: #ffffffd5;
+}
+
+.sub-track {
+  background-color: #ffffff;
+  margin-left: 20px;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.track-number {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.track-title, .track-version {
+  flex: 1;
+  font-weight: bold;
+}
+
+.track-composer {
+  font-size: 0.8em;
+  color: #0048b4;
+  margin-right: 10px;
+}
+
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.play-pause-button {
+  background-color: #005db4;
+  color: #fff9e8;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #2464A4;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #FFCF01;
+}
+
+.time-display {
+  font-size: 12px;
+  color: #003c64b4;
+  width: 100px;
+  text-align: right;
+}
+
+.download-button, .toggle-button {
+  background-color: #FFCF01;
+  color: #0D2137;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.toggle-button {
+  background-color: #1e548a;
+  color: #FFCF01;
+}
+
+.download-button:hover, .toggle-button:hover, .play-pause-button:hover {
+  opacity: 0.8;
+}
+
+.loading, .error, .not-found {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 50px;
+}
+
+.album-tag-button {
+  border: none;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin: 2px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.album-tag-button.description {
+  background-color: #e0f1ff;
+  color: #3982d6;
+}
+
+.album-tag-button.genre {
+  background-color: #e8faff;
+  color: #6399bd;
+}
+
+.album-tag-button:hover {
+  opacity: 0.8;
+}
+
+.album-tag-button.description:hover {
+  background-color: #003388;
+  color: #bed6f1;
+}
+
+.album-tag-button.genre:hover {
+  background-color: #0089ac;
+  color: #f2faff;
+}
+
+.play-pause-button {
+  /* 기존 스타일 유지 */
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-color: #005db4;
+  color: #fff9e8;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.album-navigation {
+  position: absolute; /* 변경: absolute로 위치 설정 */
+  width: calc(100% + 200px);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  right: 0;
+  z-index: 1000;
+  display: flex; /* 버튼들을 가로로 배치 */
+  justify-content: space-between; /* 양 끝으로 배치 */
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  pointer-events: auto;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  position: absolute; /* Added */
+  top: 50%; /* Added */
+  transform: translateY(-50%); /* Added */
+}
+
+.nav-button:hover {
+  opacity: 1;
+}
+
+.nav-button img {
+  width: 30px;
+  height: 30px;
+  fill: #005db4;
+}
+
+.nav-button.prev-button {
+  left: 0; /* Changed from -400px */
+}
+
+.nav-button.next-button {
+  right: 0; /* Changed from -400px */
+}
+
+
+.nav-button:hover {
+  color: #005db4;
+}
+
+.back-to-list {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #005baf46;
+  font-size: 30px;
+  border: none;
+  text-decoration: none;
+}
+
+.back-to-list::before {
+  content: "\2630"; /* 책갈피 모양 */
+  font-size: 25px;
+}
+
+
+.back-to-list:hover {
+  color: #005db4;
+}
+
+.prev-button, .next-button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.back-to-list {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.introduction-divider {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.album-introduction h3 {
+  color: #005db4;
+  margin-bottom: 10px;
+}
+
+.introduction-content {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.introduction-content.fade-in {
+  opacity: 1;
+}
+
+.introduction-content.fade-out {
+  opacity: 0;
+}
+
+.album-introduction p {
+  color: #0065c4;
+  line-height: 1.6;
+  font-size: 13px;
+  font-style: italic;
+}

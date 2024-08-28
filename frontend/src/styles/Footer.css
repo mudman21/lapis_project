@@ -1,0 +1,53 @@
+footer {
+    background-color: #fff9ed;
+    padding: 5px 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: light;
+    z-index: 1000;
+    color: #015aff;
+  }
+  
+  .footer-content {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .legal-notice {
+    margin: 0;
+    color: #0059ac;
+  }
+  
+  .cc-license {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #0059ac;
+  }
+
+  .admin-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #0059ac;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.admin-icon:hover {
+    opacity: 1;
+}
+
+.admin-icon i {
+    font-size: 16px;
+}

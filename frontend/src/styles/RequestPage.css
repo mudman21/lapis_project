@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    --primary-color: #2687d6;
+    --secondary-color: #008ac034;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --border-color: #ddd;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .request-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .request-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .request-page-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .new-request-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: flex; /* 추가 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+  }
+  
+  .new-request-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .new-request-btn i {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  
+  .request-list {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .request-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+  }
+  
+  .request-item:last-child {
+    border-bottom: none;
+  }
+  
+  .request-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .request-item h3 {
+    margin: 0;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  
+  .request-meta {
+    display: flex;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .request-meta span {
+    margin-left: 10px;
+  }
+  
+  .request-meta i {
+    font-size: 14px;
+    margin-right: 4px;
+  }
+  
+  /* RequestDetail.css 부분 */
+  
+  .request-detail {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .back-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .back-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .edit-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .edit-form input[type="text"],
+  .edit-form input[type="password"],
+  .edit-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .edit-form textarea {
+    min-height: 100px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .button-group button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .save-btn, .edit-btn {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .cancel-btn, .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .comments-section {
+    margin-top: 30px;
+  }
+  
+  .comment {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .comment-form textarea {
+    min-height: 80px;
+  }
+  
+  .comment-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }

@@ -1,0 +1,37 @@
+.search-custom-audio-player {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+.search-play-pause-button {
+  background-color: #0073df;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search-progress-container {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.search-progress-bar {
+  height: 100%;
+  background-color: #0073df;
+}
+
+.search-time-display {
+  font-size: 12px;
+  color: #333;
+}

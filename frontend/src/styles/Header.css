@@ -1,0 +1,80 @@
+header {
+  background-color: #fff9ed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -1px;
+  color: #0073df;
+  text-decoration: none;
+}
+.logo img {
+  height: 100%; /* 로고 이미지의 높이를 헤더 높이에 맞게 설정 */
+  max-height: 20px; /* 최대 높이 제한 */
+  width: auto; /* 가로 비율을 유지하면서 크기 조절 */
+}
+.modoo-link {
+  text-decoration: none;
+  color: #005db4;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #086ac5;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #ffc400;
+}
+
+.search-input {
+  margin-left: 20px;
+  padding: 5px;
+  background-color: #f5ebd6;
+  border: 1px solid #086ac5;
+  color: #007adf;
+}

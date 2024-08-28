@@ -1,0 +1,450 @@
+@font-face {
+  font-family: 'FiraSansExtraLight';
+  src: url('../../FiraSans-ExtraLight.ttf') format('truetype');
+}
+
+.home {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.top-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+  height: 300px;
+}
+
+.intro-section,
+.stats-section,
+.news-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-section {
+  position: relative;
+  width: 48%;
+}
+
+.stats-section {
+  width: 17%;
+}
+
+.news-section {
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.section-title {
+  color: #086ac5;
+  font-size: 22px;
+  border-bottom: 2px solid #e0f0ff;
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.intro-content,
+.stats-content,
+.news-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.intro-content {
+  position: relative;
+  height: 100%;  /* 추가 */
+  font-size: 13px;
+  /* 기존 스타일 유지 */
+}
+.intro-slider {
+  position: relative;
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(8, 106, 197, 0.05) transparent;
+}
+
+.intro-slider::-webkit-scrollbar {
+  width: 8px;  /* 약간 넓혀서 사용성 개선 */
+}
+
+.intro-slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.intro-slider::-webkit-scrollbar-thumb {
+  background-color: rgba(8, 106, 197, 0.05);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.5s ease;  /* 전환 시간 증가 */
+}
+
+.intro-slider::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(8, 106, 197, 0.5);
+}
+
+/* Firefox용 스크롤바 스타일 */
+.intro-slider {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(8, 106, 197, 0.05) transparent;
+  transition: scrollbar-color 0.5s ease;  /* 전환 효과 추가 */
+}
+
+.intro-slider:hover {
+  scrollbar-color: rgba(8, 106, 197, 0.3) transparent;
+}
+
+/* IE용 스크롤바 스타일 */
+.intro-slider {
+  -ms-overflow-style: none;
+}
+
+.intro-slider::-ms-scrollbar-thumb {
+  background-color: rgba(8, 106, 197, 0.05);
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+}
+
+.intro-slider::-ms-scrollbar-thumb:hover {
+  background-color: rgba(8, 106, 197, 0.5);
+}
+
+.intro-slider::-ms-scrollbar-track {
+  background: transparent;
+}
+
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -5px;
+
+  
+}
+
+.contact-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #086ac5b4;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  padding: 0 20%;
+  border-left: 2px solid #086ac560;
+  white-space: nowrap;
+}
+
+.contact-link:first-child {
+  border-left: none;
+}
+
+.contact-link:hover {
+  color: #ffc400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    border-left: none;
+    border-top: 1px solid #086ac5;
+    padding: 5px 0;
+  }
+
+  .contact-link:first-child {
+    border-top: none;
+  }
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide p {
+  color: #0059ac;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.news-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-section li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;  /* 더 연한 색상의 구분선 */
+  transition: background-color 0.3s ease;
+}
+.news-section li:last-child {
+  border-bottom: none;
+}
+
+.news-section li:hover {
+  background-color: #eaf0fa;  /* 호버 시 배경색 변경 */
+}
+
+.news-section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;  /* 아이템 너비를 100%로 설정 */
+}
+
+
+.news-date {
+  display: block;
+  font-size: 11px;
+  color: #0059ac;
+  margin-bottom: 1px;
+  opacity: 0.8;
+}
+
+.home-news-title {
+  display: block;
+  color: #1977c9;  /* 원하는 색상으로 변경 */
+  font-size: 14px !important;
+  font-weight: 1000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+  line-height: 1.3;
+  border-bottom: none;  /* 파란 선 제거 */
+}
+
+.news-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.news-content::-webkit-scrollbar-thumb {
+  background-color: rgba(8, 106, 197, 0.2);
+  border-radius: 4px;
+}
+
+.news-section:hover .news-content::-webkit-scrollbar-thumb {
+  background-color: rgba(8, 106, 197, 0.4);
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  height: calc(100% - 60px);
+}
+
+.stat-item {
+  text-align: left;
+  margin-bottom: -10px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #0059ac;
+  margin-bottom: 2px;
+  
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #086ac5;
+  display: block;
+}
+
+.news-content::-webkit-scrollbar,
+.stats-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-content::-webkit-scrollbar-track,
+.stats-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.news-content::-webkit-scrollbar-thumb,
+.stats-content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.news-section:hover .news-content::-webkit-scrollbar-thumb,
+.stats-section:hover .stats-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@font-face {
+  font-family: 'FiraSansExtraLight';
+  src: url('../../FiraSans-ExtraLight.ttf') format('truetype');
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* 변경: center에서 flex-end로 */
+  text-align: center;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.315);
+  font-family: 'FiraSansExtraLight', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: flex-end;  /* 변경: center에서 flex-end로 */
+  align-items: center;
+  height: 100%;
+  width: 75%;  /* 변경: 전체 너비의 75% 사용 */
+  position: relative;
+  color: white;
+  
+}
+
+
+.banner-slider {
+  position: relative;
+  width: 80%;  /* 변경: 너비 증가 */
+  height: auto;  /* 변경: 높이 자동 조정 */
+  overflow: visible;
+}
+
+.banner-slide {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0px 0px 14px rgba(255, 255, 255, 0.342);
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+  white-space: normal;
+  text-align: center;
+  word-break: keep-all;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed;
+  letter-spacing: -0.3px;
+
+}
+
+.banner-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.banner-slide.fade-out {
+  opacity: 0;
+  z-index: 0;
+}
+
+.banner-main-title {
+  font-size: 25px;
+  margin-bottom: 0px;
+  font-family: 'FiraSansExtraLight', sans-serif;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-family: 'FiraSansExtraLight', sans-serif;
+  font-weight: 300;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  transform: translate(0, 0);
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(201, 133, 133, 0.5);
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+.language-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0059ac;
+}
+
+.slide p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #0059ac;
+}
+
